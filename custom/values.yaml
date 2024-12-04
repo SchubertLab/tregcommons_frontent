@@ -1,0 +1,116 @@
+global:
+  dev: true
+  hostname: localhost
+  # set this to gen3ff if you want to use the frontend framework as the root
+  # set to portal if you want to use api-portal as the root. in this case the ff will be at /ff
+  frontendRoot: gen3ff
+  # use these if you want to use the same SSL cert for all services so they
+  # are the same as the ones used by the revproxy
+  tls:
+    cert: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUI0akNDQVdlZ0F3SUJBZ0lJVExsNUdYNG55VW93Q2dZSUtvWkl6ajBFQXdNd0lERWVNQndHQTFVRUF4TVYKYldsdWFXTmhJSEp2YjNRZ1kyRWdOell6TVdSa01CNFhEVEkwTVRFd09EQTVNalV6T1ZvWERUSTJNVEl3T0RBNQpNalV6T1Zvd0ZqRVVNQklHQTFVRUF4TUxkSEpsWTJkdmJXMXZibk13ZGpBUUJnY3Foa2pPUFFJQkJnVXJnUVFBCklnTmlBQVFxUzZwVHFpQU5LamJZRytHeVRiNkp1dXlwVWZIZTU5em1MbjJRSG1wK05xNm9FcEEzU0Jmd1pocXEKVjZKYlNyNFZlOTlyNkZkNmUyQ0ZWdWsvWWxYMmtpS3hvN0JpQmFQWStKU0ppcWd4eFVXZnB3Y0UxaTVFek10egpkaFFvQmYyamVEQjJNQTRHQTFVZER3RUIvd1FFQXdJRm9EQWRCZ05WSFNVRUZqQVVCZ2dyQmdFRkJRY0RBUVlJCkt3WUJCUVVIQXdJd0RBWURWUjBUQVFIL0JBSXdBREFmQmdOVkhTTUVHREFXZ0JTc2N5L3NEZ3JFR01pVjc4S0kKR3k3ZHFyUUxEekFXQmdOVkhSRUVEekFOZ2d0MGNtVmpaMjl0Ylc5dWN6QUtCZ2dxaGtqT1BRUURBd05wQURCbQpBakVBdFNSTnNnZlJNbTdRUlpzL1ZMcGE5YTBFMGJZbjBRNXlMRUJGcVV0bllLbEhIdFNYWEM2Y2xHRWU1ZTdpCmxmUE1BakVBbk0xTnM4L05ENzQvUTBFSUZPN2htUHdCV20wdmszNklFUHo5Q3VTWVFZTVNjcFJsdWVFdHRPM20KeFY3RDd3L0cKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JRzJBZ0VBTUJBR0J5cUdTTTQ5QWdFR0JTdUJCQUFpQklHZU1JR2JBZ0VCQkRDRTQrVTZLOU9MSStWVjBiV0MKOHJmam82LzYxeWRoN3lNMmlkSHRSbDJLVDllbHdUdzh3MXd3ZVUrMTJkWGxOUGloWkFOaUFBUXFTNnBUcWlBTgpLamJZRytHeVRiNkp1dXlwVWZIZTU5em1MbjJRSG1wK05xNm9FcEEzU0Jmd1pocXFWNkpiU3I0VmU5OXI2RmQ2CmUyQ0ZWdWsvWWxYMmtpS3hvN0JpQmFQWStKU0ppcWd4eFVXZnB3Y0UxaTVFek10emRoUW9CZjA9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+
+fence:
+  FENCE_CONFIG:
+    LOGIN_REDIRECT_WHITELIST: [https://localhost:3010, https://localhost:3010/user/login/google/login/, https://localhost/user/login/google/login/]]
+    OPENID_CONNECT:
+      google:
+        client_id: 1084234648567-dejansmsg9aihrdbj6utdi95est9sqjk.apps.googleusercontent.com
+        client_secret: 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
+
+
+guppy:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+wts:
+  enabled: false
+  image:
+    repository:
+    tag:
+
+ambassador:
+  enabled: false
+  image:
+    repository:
+    tag:
+
+portal:
+  enabled: false
+  image:
+    repository:
+    tag:
+
+peregrine:
+  enabled: false
+  image:
+    repository:
+    tag:
+
+pidgin:
+  enabled: false
+  image:
+    repository:
+    tag:
+
+argo-wrapper:
+  enabled: false
+  image:
+    repository:
+    tag:
+
+hatchery:
+  enabled: false
+  image:
+    repository:
+    tag:
+
+sower:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+revproxy:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+audit:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+sheepdog:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+manifestservice:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+arborist:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+metadata:
+  enabled: true
+  image:
+    repository:
+    tag:
+
+indexd:
+  enabled: true
+  image:
+    repository:
+    tag:
